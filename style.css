@@ -1,0 +1,230 @@
+﻿/* BLOKADA ZAZNACZANIA (tabelka robi bugi) *
+.unselectable
+{
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+*/
+/* TŁO */
+
+body {
+background: #716c68 url('./grafiki/kropki.jpg');
+background-repeat: repeat;
+background-size: cover;
+background-size: 100%; /* FIX dla IE */ 
+}
+
+/* ZAWARTOŚĆ */
+
+
+#content{
+position: relative;
+margin-left: 200px;
+padding-top: 1em;
+padding-bottom: 0px;
+}
+
+/* MENU I LOGO */
+
+nav{
+font-size: 10px;
+z-index: 1;
+position: fixed;
+top: 0px;
+left: 0px;
+background: url('./grafiki/nav_bg.png');
+background-repeat: repeat-y;
+width: 200px;
+height: 100%;
+box-shadow: 1px 0px 1px rgba(255,255,255,0.3);
+}
+
+/*kolorki pozycji menu głownego */
+
+.item1 span:hover{background-color: #2AA591} /* 42,165,145 */
+.item2 span:hover{background-color: #097F92} /* 9,127,146 */
+.item3 span:hover{background-color: #234686} /* 35,70,134 */
+.item4 span:hover{background-color: #41197A} /* 65,25,122 */
+.item5 span:hover{background-color: #5E0672} /* 94,6,114 */
+.item6 span:hover{background-color: #7B086B} /* 123,8,107 */
+.item7 span:hover{background-color: #A10956} /* 161,9,86 */
+.item8 span:hover{background-color: #BE0C32} /* 190,12,50 */
+
+nav a span {
+display: block;
+font-family: 'Open Sans', 'Source Sans Pro', 'Tahoma', sans-serif;
+font-size: 14px;
+text-align: left;
+color: white;
+padding: 4px 40px 4px 40px;
+line-height: 2em;
+margin-right: 1px;
+-webkit-transition: background, 0.4s, box-shadow 0.4s;
+-o-transition: background 0.4s;
+-moz-transition: background 0.4s;
+-ms-transition: background 0.4s;
+transition: background 0.4s;
+}
+
+
+#logo {
+height: 130px;
+background: rgba(60,151,240,0.8) url('./grafiki/logo_strony110.png');
+box-shadow: 0px 0px 2em black, inset 0px -10px 5em rgba(0,0,0,0.33);;
+background-position: center;
+background-repeat: no-repeat;
+border-right: -1px black;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 1em;
+}
+
+/* ARTYKUŁY NA GŁOWNEJ */
+/* nutka */
+.nutka {
+height: 60px;
+width: 60px;
+float: left;
+margin-top: -1em;
+margin-right: -1em;
+background-color: red;
+}
+
+/*tytuł posta*/
+h1{
+color: white;
+text-shadow: 1px 2px 3px rgba(0,0,0,0.75);
+font-family: 'Open Sans';
+font-size: 22px;
+font-weight: 100;
+}
+
+/*opis posta*/
+h2 {
+font-family: 'Open Sans';
+font-size: 14px;
+font-weight: normal
+}
+
+/*data w poscie i autor posta */
+
+.heading {
+font-family: 'Arial'; /* edit */
+background-color: rgba(0,0,0,0.6);
+display: block;
+padding: 1em 2em 1em 1em;
+text-align: right;
+z-index: 2;
+font-size: 12px;
+color: white;
+}
+
+
+/*obrazek*/
+p img{
+width: 40%;
+height: auto;
+}
+		p img.left{
+		float:left;
+		margin: 5px 5px 5px 0px;
+		}
+
+		p img.right{
+		float:right;
+		margin: 5px 0px 5px 5px;
+		}
+
+		
+
+
+/* tła artykułów i ankiet */
+section, aside
+{
+position: relative;
+display: block;
+font-size: 12px;
+font-family: 'Open Sans';
+color: rgba(255,255,255,0.9);
+box-shadow: inset 0px 0px 6px rgba(0,0,0,0.75);
+background: rgba(0,0,0,0.35);
+padding: 1em 1.5em 1em 2em;
+margin-bottom: 1em;
+}
+
+/* belka sponsorów */
+#sponsors {
+margin-left: 1em;
+position: relative;
+display: block;
+font-size: 12px;
+font-family: 'Open Sans';
+color: rgba(255,255,255,0.9);
+box-shadow: inset 0px 0px 6px rgba(0,0,0,0.75);
+background: rgba(255,255,255,1);
+padding: 1em 1.5em 1em 2em;
+margin-bottom: 1em;
+}
+
+/* justowanie atykułu */
+article {
+overflow: auto;
+text-align: justify;
+text-justify: newspaper;
+}
+
+/* pudełka kolumn */
+
+#articles {
+padding-left: 1em;
+}
+
+#asides {
+display: none;
+padding-left: 1em;
+width: 200px;
+}
+
+#sponsors {
+padding-left: 1em;
+margin-right: 1em;
+float:left;
+display: block;
+width: 200px;
+}
+
+td {
+vertical-align: top;
+}
+
+
+
+
+
+footer
+{
+clear: both;
+font-size: 16px;
+font-family: 'Open Sans';
+color: rgba(255,255,255,0.9);
+box-shadow: inset 0px 0px 6px rgba(0,0,0,0.75);
+background: rgb(35,45,45);
+padding: 3em 5em 0em 5em;
+margin-bottom: 0px;
+bottom: 0px;
+
+}
+
+/*.marquee
+{
+overflow-y: -webkit-marquee;
+-webkit-marquee-direction: down;
+-webkit-marquee-increment: 1px;
+-webkit-marquee-repetition: loop;
+-webkit-marquee-speed: fast;
+-webkit-marquee-style: infinite;
+}*/
